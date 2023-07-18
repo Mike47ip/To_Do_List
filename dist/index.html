@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Output Management</title>
-<script defer src="main.js"></script></head>
-<body>
-  <h1>Hello</h1>
-
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To do list</title>
+  <link
+   rel="stylesheet"
+   href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+  />
+ <script defer src="main.js"></script></head>
+ <body>
+  <div class="TaskContainer">
+   <h1>Today's To do list</h1>
+   <input type="text" placeholder="Add your task here..." />
+   <ul class="Tasklist">
+    <li><input type="checkbox" name="checkbox" id="check" />Watch Movies<span class="material-symbols-outlined delete"></span></li>
+   </ul>
+   <button type="button">Clear all completed</button>
+  </div>
 
   <script src="main.js"></script>
-</body>
+ </body>
 </html>

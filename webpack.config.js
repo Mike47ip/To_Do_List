@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/index.js',
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Output Management',
+      title: 'To do list',
       template: './src/index.html',
     }),
   ],
@@ -19,7 +19,8 @@ module.exports = {
     ],
   },
   devServer: {
-    static: './dist',
+    watchFiles: path.join(__dirname, 'src'),
+    hot: true,
   },
   output: {
     filename: 'main.js',
