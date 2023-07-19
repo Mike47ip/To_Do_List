@@ -96,6 +96,7 @@ label {
 .material-symbols-outlined {
   padding-left: 20px;
   cursor: pointer;
+  color: #888;
 }
 
 .tasklist {
