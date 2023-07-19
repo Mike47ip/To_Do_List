@@ -10,33 +10,13 @@
   />
  </head>
  <body>
+
+  <div><h1 class="heading">Today's To do list</h1><span><ion-icon name="refresh-circle-outline"></ion-icon></span></div>
   <div class="TaskContainer">
-   <h1>Today's To do list</h1>
-   <input type="text" placeholder="Add your task here..." />
+   <input type="text" id="placeholder" placeholder="Add your task here..." />
    <ul class="Tasklist">
     <li>
-     <input type="checkbox" name="checkbox" id="check" />Watch Movies<span
-      class="material-symbols-rounded"
-     >
-      delete
-     </span>
-    </li>
-    <li>
-     <input type="checkbox" name="checkbox" id="check" />Watch Movies<span
-      class="material-symbols-rounded"
-     >
-      delete
-     </span>
-    </li>
-    <li>
-     <input type="checkbox" name="checkbox" id="check" />Watch Movies<span
-      class="material-symbols-rounded"
-     >
-      delete
-     </span>
-    </li>
-    <li>
-     <input type="checkbox" name="checkbox" id="check" />Watch Movies<span
+     <input type="checkbox" name="checkbox" id="check" />Watch movies<span
       class="material-symbols-rounded"
      >
       delete
@@ -46,6 +26,16 @@
    <button type="button">Clear all completed</button>
   </div>
 
+  <div class="tasklist"></div>
+
   <script src="main.js"></script>
+  <script
+   type="module"
+   src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+   nomodule
+   src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
  </body>
 </html>
