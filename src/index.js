@@ -1,13 +1,44 @@
-// import _ from 'lodash';
 import './style.css';
 
-//  function component() {
-//    const element = document.createElement('div');
+const listArray = [
+  {
+    description: 'Go on holidays',
+    completed: false,
+    index: '1',
+  },
+  {
+    description: 'Wash utensils',
+    completed: false,
+    index: '2',
+  },
+  {
+    description: 'Watch movies',
+    completed: false,
+    index: '3',
+  }, {
+    description: 'Pray to God',
+    completed: false,
+    index: '3',
+  },
+];
 
-//   // Lodash, now imported by this script
-//    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+const taskcontainer = document.querySelector('.tasklist');
+taskcontainer.innerHTML = '';
 
-//    return element;
-//  }
+const displayList = () => {
+  listArray.forEach((list) => {
+    const li = document.createElement('li');
+    li.classList.add('newlist');
+    li.innerHTML = `
+    <ul class="list">
+      <li>
+       <input type="checkbox" name="checkbox" id="check" />
+       <label for="label">${list.description}</label
+       ><span class="material-symbols-outlined"> more_vert </span>
+      </li>
+     </ul>`;
+    taskcontainer.appendChild(li);
+  });
+};
 
-//  document.body.appendChild(component());
+displayList();

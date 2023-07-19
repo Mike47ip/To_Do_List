@@ -1,7 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,400;1,700&display=swap');
+
 body {
-  background-color: rgb(34, 39, 38);
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.TaskContainer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px;
+}
+
+.listLiner {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  height: auto;
+  box-shadow: 1px 0 20px 1px #888;
 }
 
 h1 {
-  color: white;
+  color: #000;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.01px solid #ebe8e8;
+  width: 100%;
+  padding-right: 20px;
+}
+
+.heading h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  padding-left: 20px;
+
+  /* padding: 15px 15px 15px 15px; */
+}
+
+#placeholder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.01px solid #ebe8e8;
+  width: 100%;
+  padding: 15px 15px 15px 15px;
+}
+
+#placeholder input {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: italic;
+  padding-left: 20px;
+  color: #888;
+  left: 0%;
+  border: none;
+  outline: none;
+}
+
+#formlist {
+  display: none;
+  width: 100%;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+label {
+  text-align: left;
+  width: 80%;
+}
+
+.material-symbols-outlined {
+  padding-left: 20px;
+  cursor: pointer;
+  color: #888;
+}
+
+#keyboard_return {
+  padding-right: 20px;
+}
+
+.tasklist {
+  list-style: none;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.newlist {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  list-style: none;
+}
+
+.btnBack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebedee;
+  width: 100%;
+}
+
+.button {
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  padding: 15px 15px 15px 15px;
+  color: #888;
 }

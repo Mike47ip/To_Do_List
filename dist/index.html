@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Output Management</title>
-<script defer src="main.js"></script></head>
-<body>
-  <h1>Hello</h1>
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To do list</title>
+  <link
+   rel="stylesheet"
+   href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+  />
+ <script defer src="main.js"></script></head>
+ <body>
+  <article class="TaskContainer">
+   <div class="listLiner">
+    <div class="heading">
+     <h1>Today's To do list</h1>
+     <span><ion-icon name="refresh-circle-outline"></ion-icon></span>
+    </div>
+    <div id="placeholder">
+     <input type="text" placeholder="Add your task here..." />
+    </div>
 
+    <form id="formlist" action="#">
+     <ul class="Tasklist">
+      <li>
+       <input type="checkbox" name="checkbox" id="check" /><span
+        class="material-symbols-rounded"
+       >
+        delete
+       </span>
+      </li>
+     </ul>
+    </form>
+    <div class="tasklist"></div>
+    <div class="button">
+     <button type="button">Clear all completed</button>
+    </div>
+   </div>
+  </article>
 
   <script src="main.js"></script>
-</body>
+  <script
+   type="module"
+   src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+   nomodule
+   src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+ </body>
 </html>
