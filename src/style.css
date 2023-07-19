@@ -99,6 +99,10 @@ label {
   color: #888;
 }
 
+#keyboard_return {
+  padding-right: 20px;
+}
+
 .tasklist {
   list-style: none;
   width: 100%;
