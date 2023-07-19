@@ -2,11 +2,14 @@
 
 body {
   background-color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .TaskContainer {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
   padding: 100px;
@@ -14,7 +17,7 @@ body {
 
 .listLiner {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
   width: 80%;
@@ -32,38 +35,76 @@ h1 {
   align-items: center;
   border-bottom: 0.01px solid #ebe8e8;
   width: 100%;
-  
-}
-
-#placeholder {
-  display: flex;
-  justify-content: start;
-  
-}
-
-#placeholder input{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  font-style: italic;
-  padding-left: 5px;
-  width: 100%;
-  color: #888;
+  padding-right: 20px;
 }
 
 .heading h1 {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 20px;
-  padding-left: 5px;
+  padding-left: 20px;
+  /* padding: 15px 15px 15px 15px; */
+}
+
+#placeholder {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.01px solid #ebe8e8;
+  width: 100%;
+  padding: 15px 15px 15px 15px;
+}
+
+#placeholder input{
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: italic;
+  padding-left: 20px;
+  color: #888;
+  left: 0%;
+  border: none;
+  outline: none;
 }
 
 #formlist {
   display: none;
+  width: 100%
 }
 
-.Tasklist {
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+label {
+  text-align: left;
+  width: 80%;
+}
+
+.material-symbols-outlined {
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.tasklist {
   list-style: none;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .newlist {
@@ -71,4 +112,21 @@ h1 {
   font-weight: 400;
   font-size: 20px;
   list-style: none;
+}
+
+.btnBack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebedee;
+  width: 100%;
+}
+
+.button {
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  padding: 15px 15px 15px 15px;
+  color: #888;
 }

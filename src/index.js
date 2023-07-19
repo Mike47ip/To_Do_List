@@ -16,7 +16,7 @@ const listArray = [
     completed: false,
     index: '3',
   }, {
-    description: 'Pray',
+    description: 'Pray to God',
     completed: false,
     index: '3',
   },
@@ -30,15 +30,13 @@ const displayList = () => {
     const li = document.createElement('li');
     li.classList.add('newlist');
     li.innerHTML = `
-    <ul class="Tasklist">
-    <li>
-     <input type="checkbox" name="checkbox" id="check" />${list.description}<span
-      class="material-symbols-rounded"
-     >
-      delete
-     </span>
-    </li>
-   </ul>`;
+    <ul class="list">
+      <li>
+       <input type="checkbox" name="checkbox" id="check" />
+       <label for="label">${list.description}</label
+       ><span class="material-symbols-outlined"> more_vert </span>
+      </li>
+     </ul>`;
     taskcontainer.appendChild(li);
   });
 };

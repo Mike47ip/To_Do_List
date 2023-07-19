@@ -8,32 +8,34 @@
    rel="stylesheet"
    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
   />
+  <link
+   rel="stylesheet"
+   href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+  />
  </head>
  <body>
   <article class="TaskContainer">
    <div class="listLiner">
     <div class="heading">
      <h1>Today's To do list</h1>
-     <span><ion-icon name="refresh-circle-outline"></ion-icon></span>
+     <span class="material-symbols-outlined"> autorenew </span>
     </div>
     <div id="placeholder">
      <input type="text" placeholder="Add your task here..." />
     </div>
 
     <form id="formlist" action="#">
-     <ul class="Tasklist">
+     <ul class="list">
       <li>
-       <input type="checkbox" name="checkbox" id="check" /><span
-        class="material-symbols-rounded"
-       >
-        delete
-       </span>
+       <input type="checkbox" name="checkbox" id="check" />
+       <label for="label">${list.description}</label
+       ><span class="material-symbols-outlined"> more_vert </span>
       </li>
      </ul>
     </form>
     <div class="tasklist"></div>
-    <div class="button">
-     <button type="button">Clear all completed</button>
+    <div class="btnBack">
+     <a class="button" type="button">Clear all completed</a>
     </div>
    </div>
   </article>
