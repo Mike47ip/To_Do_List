@@ -4,12 +4,71 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
+.TaskContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px;
+}
+
+.listLiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  height: auto;
+  box-shadow: 1px 0px 20px 1px #888;
+}
+
 h1 {
   color: #000;
 }
 
 .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.01px solid #ebe8e8;
+  width: 100%;
+  
+}
+
+#placeholder {
+  display: flex;
+  justify-content: start;
+  
+}
+
+#placeholder input{
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  font-size: 26px;
+  font-size: 20px;
+  font-style: italic;
+  padding-left: 5px;
+  width: 100%;
+  color: #888;
+}
+
+.heading h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  padding-left: 5px;
+}
+
+#formlist {
+  display: none;
+}
+
+.Tasklist {
+  list-style: none;
+}
+
+.newlist {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  list-style: none;
 }

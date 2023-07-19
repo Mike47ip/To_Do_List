@@ -10,44 +10,33 @@
   />
  <script defer src="main.js"></script></head>
  <body>
+  <article class="TaskContainer">
+   <div class="listLiner">
+    <div class="heading">
+     <h1>Today's To do list</h1>
+     <span><ion-icon name="refresh-circle-outline"></ion-icon></span>
+    </div>
+    <div id="placeholder">
+     <input type="text" placeholder="Add your task here..." />
+    </div>
 
-  <div><h1 class="heading">Today's To do list</h1><span><ion-icon name="refresh-circle-outline"></ion-icon></span></div>
-  <div class="TaskContainer">
-   <input type="text" id="placeholder" placeholder="Add your task here..." />
-   <ul class="Tasklist">
-    <li>
-     <input type="checkbox" name="checkbox" id="check" />Watch movies<span
-      class="material-symbols-rounded"
-     >
-      delete
-     </span>
-    </li>
-    <li>
-     <input type="checkbox" name="checkbox" id="check" />Pray<span
-      class="material-symbols-rounded"
-     >
-      delete
-     </span>
-    </li>
-    <li>
-     <input type="checkbox" name="checkbox" id="check" />Read a book<span
-      class="material-symbols-rounded"
-     >
-      delete
-     </span>
-    </li>
-    <li>
-     <input type="checkbox" name="checkbox" id="check" />Sleep<span
-      class="material-symbols-rounded"
-     >
-      delete
-     </span>
-    </li>
-   </ul>
-   <button type="button">Clear all completed</button>
-  </div>
-
-  <div class="tasklist"></div>
+    <form id="formlist" action="#">
+     <ul class="Tasklist">
+      <li>
+       <input type="checkbox" name="checkbox" id="check" /><span
+        class="material-symbols-rounded"
+       >
+        delete
+       </span>
+      </li>
+     </ul>
+    </form>
+    <div class="tasklist"></div>
+    <div class="button">
+     <button type="button">Clear all completed</button>
+    </div>
+   </div>
+  </article>
 
   <script src="main.js"></script>
   <script
