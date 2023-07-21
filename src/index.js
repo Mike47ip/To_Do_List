@@ -1,18 +1,18 @@
 import './style.css';
 
 // Function to retrieve the task list from local storage
-function getTaskListFromLocalStorage() {
+const getTaskListFromLocalStorage = () => {
   const taskListString = localStorage.getItem('taskList');
   return taskListString ? JSON.parse(taskListString) : [];
-}
+};
 
 // Function to save the task list to local storage
-function saveTaskListToLocalStorage(taskList) {
+const saveTaskListToLocalStorage = (taskList) => {
   localStorage.setItem('taskList', JSON.stringify(taskList));
-}
+};
 
 // Function to update the text of a task
-function updateTaskText(index, newText, isChecked) {
+const updateTaskText = (index, newText, isChecked) => {
   const taskList = getTaskListFromLocalStorage();
   const taskToEdit = taskList.find((task) => task.index === index);
 
@@ -23,10 +23,10 @@ function updateTaskText(index, newText, isChecked) {
   taskToEdit.text = newText;
   taskToEdit.checked = isChecked || false; // Save the checkbox state in the task object
   saveTaskListToLocalStorage(taskList);
-}
+};
 
 // Function to add a new task to the list
-function addTask() {
+const addTask = () => {
   const newTaskInput = document.getElementById('inputPlaceholder');
   const newTaskText = newTaskInput.value.trim();
 
@@ -47,26 +47,26 @@ function addTask() {
 
   newTaskInput.value = '';
   displayTasks(taskList);
-}
+};
 
 // Function to handle key press events on the input field
-function handleKeyPress(event) {
+const handleKeyPress = (event) => {
   if (event.key === 'Enter') {
     addTask();
   }
-}
+};
 
 // New Changes: Add function to find parent li element based on the clicked delete icon
-function findParentListItem(index) {
+const findParentListItem = (index) => {
   const customDeleteIcon = document.getElementById(`deleteBtn${index}`);
   if (!customDeleteIcon) {
     return null;
   }
   return customDeleteIcon.closest('li');
-}
+};
 
 // Function to delete a task from the list
-function deleteTask(index) {
+const deleteTask = (index) => {
   const taskList = getTaskListFromLocalStorage();
 
   if (index >= 1 && index <= taskList.length) {
@@ -80,9 +80,9 @@ function deleteTask(index) {
     saveTaskListToLocalStorage(taskList);
     displayTasks(taskList);
   }
-}
+};
 
-function displayTasks(taskList) {
+const displayTasks = (taskList) => {
   const taskListElement = document.querySelector('.taskList');
   if (!taskListElement) {
     return; // Exit the function if the task list element is not found
@@ -131,10 +131,10 @@ function displayTasks(taskList) {
 
     taskListElement.appendChild(listItem);
   });
-}
+};
 
 // Function to clear all completed tasks (checkbox checked)
-function clearCompletedTasks() {
+const clearCompletedTasks = () => {
   const taskList = getTaskListFromLocalStorage();
 
   // Loop through the taskList in reverse to avoid index shifting issues
@@ -149,7 +149,7 @@ function clearCompletedTasks() {
 
   // Display the updated task list
   displayTasks(taskList);
-}
+};
 
 // Load the initial tasks on page load
 const addButton = document.getElementById('keyboard_return');
