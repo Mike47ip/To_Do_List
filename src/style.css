@@ -69,11 +69,6 @@ h1 {
   outline: none;
 }
 
-#formlist {
-  display: none;
-  width: 100%;
-}
-
 .list {
   list-style-type: none;
   padding: 0;
