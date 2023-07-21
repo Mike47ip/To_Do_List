@@ -71,7 +71,6 @@ h1 {
 
 #inputPlaceholder {
   font-style: italic;
-
 }
 
 .inputField {
@@ -113,7 +112,7 @@ label {
   padding-right: 20px;
 }
 
- .taskList {
+.taskList {
   list-style: none;
   width: 100%;
   position: relative;
@@ -140,7 +139,7 @@ label {
 }
 
 .checkbox {
-  margin-left: 20px 0 0 0;
+  margin-left: 20px;
 }
 
 .taskText {
