@@ -1,4 +1,4 @@
-import displayTasks from './display.js';
+// import displayTasks from './display.js';
 
 // Function to retrieve the task list from local storage
 const getTaskListFromLocalStorage = () => {
@@ -22,7 +22,7 @@ const clearCompletedTasks = () => {
   saveTaskListToLocalStorage(incompleteTasks);
 
   // Display the updated task list
-  displayTasks(incompleteTasks);
+  // displayTasks(incompleteTasks);
 };
 
 // export default handleKeyPress;
