@@ -106,7 +106,7 @@ To run the project, execute the following command:
 ```sh
   Open index.html in browser
   or
-  open with Live server in Vscode
+  Run npm start in Vscode Terminal
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
