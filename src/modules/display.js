@@ -10,10 +10,9 @@ const updateTaskText = (index, newText, isChecked) => {
   }
 
   taskToEdit.text = newText;
-  taskToEdit.checked = isChecked || false; 
+  taskToEdit.checked = isChecked || false;
   saveTaskListToLocalStorage(taskList);
 };
-
 
 const findParentListItem = (index) => {
   const customDeleteIcon = document.getElementById(`deleteBtn${index}`);
@@ -22,7 +21,6 @@ const findParentListItem = (index) => {
   }
   return customDeleteIcon.closest('li');
 };
-
 
 const deleteTask = (index) => {
   const taskList = getTaskListFromLocalStorage();

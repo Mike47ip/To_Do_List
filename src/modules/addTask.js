@@ -15,7 +15,7 @@ const addTask = () => {
   const newTask = {
     text: newTaskText,
     index: taskList.length + 1,
-    checked: false, 
+    checked: false,
   };
 
   taskList.push(newTask);
