@@ -70,6 +70,14 @@ const displayTasks = (taskList) => {
     taskContainer.appendChild(taskText);
     taskContainer.appendChild(customDeleteIcon);
 
+    // Add blur event listener to the taskText to save the task when the user finishes editing
+    taskText.addEventListener('blur', () => {
+      const newText = taskText.textContent.trim();
+      if (newText !== task.text) {
+        updateTaskText(task.index, newText, task.checked);
+      }
+    });
+
     listItem.appendChild(taskContainer);
 
     // Add an event listener to the customDeleteIcon to delete the task when clicked
