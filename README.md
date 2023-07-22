@@ -72,7 +72,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
--[To do List]
+-[To do List](https://github.com/Mike47ip/To_Do_List/settings/pages)
 
 <!-- GETTING STARTED -->
 
