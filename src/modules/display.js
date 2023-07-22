@@ -64,7 +64,7 @@ const displayTasks = (taskList) => {
 
     const customDeleteIcon = document.createElement('span');
     customDeleteIcon.innerHTML = `<span id="deleteBtn${task.index}" class="material-symbols-outlined"> delete </span>`;
-    customDeleteIcon.classList.add('custom-delete-icon'); // Add your custom class for the icon
+    customDeleteIcon.classList.add('custom-delete-icon');
 
     taskContainer.appendChild(checkbox);
     taskContainer.appendChild(taskText);
