@@ -10,6 +10,10 @@ const clearCompletedTasks = () => {
   // Use the filter() method to create a new array containing only the incomplete tasks
   const incompleteTasks = taskList.filter((task) => !task.checked);
 
+  incompleteTasks.forEach((task, i) => {
+    task.index = i + 1;
+  });
+
   // Save the updated task list to local storage
   saveTaskListToLocalStorage(incompleteTasks);
 
