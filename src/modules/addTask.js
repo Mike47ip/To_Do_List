@@ -15,7 +15,7 @@ const addTask = () => {
   const newTask = {
     text: newTaskText,
     index: taskList.length + 1,
-    checked: false, // Set the checkbox state to false (unchecked) for new tasks
+    checked: false, 
   };
 
   taskList.push(newTask);

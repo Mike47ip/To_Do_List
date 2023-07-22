@@ -10,11 +10,11 @@ const updateTaskText = (index, newText, isChecked) => {
   }
 
   taskToEdit.text = newText;
-  taskToEdit.checked = isChecked || false; // Save the checkbox state in the task object
+  taskToEdit.checked = isChecked || false; 
   saveTaskListToLocalStorage(taskList);
 };
 
-// New Changes: Add function to find parent li element based on the clicked delete icon
+
 const findParentListItem = (index) => {
   const customDeleteIcon = document.getElementById(`deleteBtn${index}`);
   if (!customDeleteIcon) {
@@ -23,7 +23,7 @@ const findParentListItem = (index) => {
   return customDeleteIcon.closest('li');
 };
 
-// Function to delete a task from the list
+
 const deleteTask = (index) => {
   const taskList = getTaskListFromLocalStorage();
 
@@ -42,7 +42,7 @@ const deleteTask = (index) => {
 const displayTasks = (taskList) => {
   const taskListElement = document.querySelector('.taskList');
   if (!taskListElement) {
-    return; // Exit the function if the task list element is not found
+    return;
   }
   taskListElement.innerHTML = '';
 
