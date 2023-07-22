@@ -1,7 +1,21 @@
 import './style.css';
 import displayTasks from './modules/display.js';
 import addTask from './modules/addTask.js';
-import { clearCompletedTasks, getTaskListFromLocalStorage } from './modules/events.js';
+import { getTaskListFromLocalStorage, saveTaskListToLocalStorage } from './modules/events.js';
+
+// Function to clear all completed tasks (checkbox checked)
+const clearCompletedTasks = () => {
+  const taskList = getTaskListFromLocalStorage();
+
+  // Use the filter() method to create a new array containing only the incomplete tasks
+  const incompleteTasks = taskList.filter((task) => !task.checked);
+
+  // Save the updated task list to local storage
+  saveTaskListToLocalStorage(incompleteTasks);
+
+  // Display the updated task list
+  displayTasks(incompleteTasks);
+};
 
 // Load the initial tasks on page load
 const addButton = document.getElementById('keyboard_return');
