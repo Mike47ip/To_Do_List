@@ -1,44 +1,32 @@
 import './style.css';
+import displayTasks from './modules/display.js';
+import addTask from './modules/addTask.js';
+import { getTaskListFromLocalStorage, saveTaskListToLocalStorage } from './modules/events.js';
 
-const listArray = [
-  {
-    description: 'Go on holidays',
-    completed: false,
-    index: '1',
-  },
-  {
-    description: 'Wash utensils',
-    completed: false,
-    index: '2',
-  },
-  {
-    description: 'Watch movies',
-    completed: false,
-    index: '3',
-  }, {
-    description: 'Pray to God',
-    completed: false,
-    index: '3',
-  },
-];
+// Function to clear all completed tasks (checkbox checked)
+const clearCompletedTasks = () => {
+  const taskList = getTaskListFromLocalStorage();
 
-const taskcontainer = document.querySelector('.tasklist');
-taskcontainer.innerHTML = '';
+  // Use the filter() method to create a new array containing only the incomplete tasks
+  const incompleteTasks = taskList.filter((task) => !task.checked);
 
-const displayList = () => {
-  listArray.forEach((list) => {
-    const li = document.createElement('li');
-    li.classList.add('newlist');
-    li.innerHTML = `
-    <ul class="list">
-      <li>
-       <input type="checkbox" name="checkbox" id="check" />
-       <label for="label">${list.description}</label
-       ><span class="material-symbols-outlined"> more_vert </span>
-      </li>
-     </ul>`;
-    taskcontainer.appendChild(li);
+  incompleteTasks.forEach((task, i) => {
+    task.index = i + 1;
   });
+
+  // Save the updated task list to local storage
+  saveTaskListToLocalStorage(incompleteTasks);
+
+  // Display the updated task list
+  displayTasks(incompleteTasks);
 };
 
-displayList();
+// Load the initial tasks on page load
+const addButton = document.getElementById('keyboard_return');
+addButton.addEventListener('click', addTask);
+
+const clearButton = document.getElementById('clearCompletedButton'); // Use the "id" attribute
+clearButton.addEventListener('click', clearCompletedTasks);
+
+const initialTaskList = getTaskListFromLocalStorage();
+displayTasks(initialTaskList);

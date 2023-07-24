@@ -61,12 +61,21 @@ h1 {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 20px;
-  font-style: italic;
   padding-left: 20px;
   color: #888;
   left: 0%;
   border: none;
   outline: none;
+  width: 100%;
+}
+
+#inputPlaceholder {
+  font-style: italic;
+}
+
+.inputField {
+  font-style: normal !important;
+  color: #000 !important;
 }
 
 #formlist {
@@ -103,23 +112,47 @@ label {
   padding-right: 20px;
 }
 
-.tasklist {
+.taskList {
   list-style: none;
   width: 100%;
   position: relative;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  padding: 0;
+  margin: 0;
 }
 
-.newlist {
+.taskList li {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 20px;
   list-style: none;
 }
 
-.btnBack {
+.task-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.checkbox {
+  margin-left: 20px;
+}
+
+.taskText {
+  width: 87%;
+  text-align: left;
+  outline: none;
+}
+
+.custom-delete-icon {
+  margin-right: 20px;
+}
+
+.clearAll {
   display: flex;
   justify-content: center;
   align-items: center;
