@@ -72,7 +72,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Not Available](https://.....)
+- [Not Available Comming Soon](https://.....)
 
 <!-- GETTING STARTED -->
 
